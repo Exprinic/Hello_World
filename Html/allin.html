@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        color: #666;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box {
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 5px;
+        flex: 1 1 200px;
+      }
+      .highlight {
+        background-color: yellow;
+      }
+      .center {
+        text-align: center;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .grid-item {
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      .responsive-img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>大标题</h1>
+    <!-- h1~h6 -->
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+    <p>这是一个段落。</p>
+    <div>这是一个div。</div>
+    <span>这是一个span。</span>
+    <a href="#">这是一个链接</a>
+    <img
+      src="https://via.placeholder.com/150"
+      alt="示例图片"
+      class="responsive-img"
+    />
+    <ul>
+      <li>无序列表项1</li>
+      <li>无序列表项2</li>
+    </ul>
+    <ol>
+      <li>有序列表项1</li>
+      <li>有序列表项2</li>
+    </ol>
+    <table>
+      <tr>
+        <th>表头1</th>
+        <th>表头2</th>
+      </tr>
+      <tr>
+        <td>单元格1</td>
+        <td>单元格2</td>
+      </tr>
+    </table>
+    <form>
+      <label for="name">姓名:</label>
+      <input type="text" id="name" name="name" />
+      <button type="submit">提交</button>
+    </form>
+    <select>
+      <option value="option1">选项1</option>
+      <option value="option2">选项2</option>
+    </select>
+    <textarea placeholder="请输入文本"></textarea>
+    <fieldset>
+      <legend>字段集</legend>
+      <label for="email">电子邮件:</label>
+      <input type="email" id="email" name="email" />
+    </fieldset>
+    <iframe src="https://www.example.com" width="300" height="200"></iframe>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg" />
+      您的浏览器不支持音频元素。
+    </audio>
+    <video controls width="300">
+      <source src="video.mp4" type="video/mp4" />
+      您的浏览器不支持视频元素。
+    </video>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #000000"
+    ></canvas>
+    <svg width="100" height="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="black"
+        stroke-width="3"
+        fill="red"
+      />
+    </svg>
+    <embed src="example.pdf" width="300" height="200" />
+    <object data="example.pdf" type="application/pdf" width="300" height="200">
+      <param name="name" value="value" />
+    </object>
+    <map name="imagemap">
+      <area
+        shape="rect"
+        coords="34,44,270,350"
+        alt="Computer"
+        href="computer.html"
+      />
+    </map>
+    <hr />
+    <br />
+    <b>加粗文本</b>
+    <strong>重要文本</strong>
+    <i>斜体文本</i>
+    <em>强调文本</em>
+    <u>下划线文本</u>
+    <s>删除线文本</s>
+    <sub>下标文本</sub>
+    <div class="container">
+      <div class="box">
+        <h2>Box 1</h2>
+        <p>This is a paragraph inside a flexbox container.</p>
+      </div>
+      <div class="box">
+        <h2>Box 2</h2>
+        <p>This is another paragraph inside a flexbox container.</p>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item">Grid Item 1</div>
+      <div class="grid-item">Grid Item 2</div>
+      <div class="grid-item">Grid Item 3</div>
+    </div>
+    <p class="highlight">This paragraph is highlighted.</p>
+    <p class="center">This paragraph is centered.</p>
+    <button onclick="showAlert()">Click me</button>
+    <script>
+      function showAlert() {
+        alert("Button clicked!");
+      }
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(0, 0, 150, 75);
+    </script>
+  </body>
+</html>
