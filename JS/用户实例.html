@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>订单</title>
+    <style>
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        text-align: center;
+        margin: 0 auto;
+      }
+      th,
+      td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>订单确认</h2>
+    <!-- <table> -->
+    <!-- <tr> -->
+    <!-- <th>商品名称</th> -->
+    <!-- <th>商品价格</th> -->
+    <!-- <th>商品数量</th> -->
+    <!-- <th>总价</th> -->
+    <!-- <th>收货地址</th> -->
+    <!-- </tr> -->
+    <!-- <tr> -->
+    <!-- <td>小米青春版</td> -->
+    <!-- <td>1999元</td> -->
+    <!-- <td>10</td> -->
+    <!-- <td>100</td> -->
+    <!-- <td>China</td> -->
+    <!-- </tr> -->
+    <!-- </table> -->
+    <script>
+      // 输入商品信息
+      let price = +prompt("请输入商品价格");
+      let num = +prompt("请输入商品数量");
+      let address = prompt("请输入收货地址");
+      // 计算总额
+      let total = price * num;
+      // 输出订单信息
+      document.write(`
+            <h2>订单确认</h2>
+            <table>
+                <tr>
+                    <th>商品名称</th>
+                    <th>商品价格</th>
+                    <th>商品数量</th>
+                    <th>总价</th>
+                    <th>收货地址</th>
+                </tr>
+                <tr>
+                    <td>小米青春版</td>
+                    <td>${price}元</td>
+                    <td>${num}</td>
+                    <td>${total}</td>
+                    <td>${address}</td>
+                </tr>
+            </table>
+        `);
+    </script>
+  </body>
+</html>

@@ -2,78 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- 设置文档的字符编码为UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 设置视口以适应设备的宽度 -->
+    !-- 设置视口以适应设备的宽度 -->
     <title>Document</title>
+    <!-- 文档标题 -->
     <style>
       body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
+        font-family: Arial, sans-serif; /* 设置字体为Arial或无衬线字体 */
+        margin: 20px; /* 设置页面边距为20px */
       }
       h1 {
-        color: #333;
+        color: #333; /* 设置h1标题的颜色 */
       }
       p {
-        color: #666;
+        color: #666; /* 设置段落文本的颜色 */
       }
       .container {
-        display: flex;
-        flex-wrap: wrap;
+        display: flex; /* 使用flexbox布局 */
+        flex-wrap: wrap; /* 允许子元素换行 */
       }
       .box {
-        background-color: #f4f4f4;
-        border: 1px solid #ddd;
-        padding: 10px;
-        margin: 5px;
-        flex: 1 1 200px;
+        background-color: #f4f4f4; /* 设置背景颜色 */
+        border: 1px solid #ddd; /* 设置边框 */
+        padding: 10px; /* 设置内边距 */
+        margin: 5px; /* 设置外边距 */
+        flex: 1 1 200px; /* 设置flex属性 */
       }
       .highlight {
-        background-color: yellow;
+        background-color: yellow; /* 设置背景颜色为黄色 */
       }
       .center {
-        text-align: center;
+        text-align: center; /* 设置文本居中对齐 */
       }
       .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        display: grid; /* 使用grid布局 */
+        grid-template-columns: repeat(3, 1fr); /* 设置三列布局，每列宽度相等 */
+        gap: 10px; /* 设置网格项之间的间距 */
       }
       .grid-item {
-        background-color: #f4f4f4;
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: center;
+        background-color: #f4f4f4; /* 设置背景颜色 */
+        border: 1px solid #ddd; /* 设置边框 */
+        padding: 10px; /* 设置内边距 */
+        text-align: center; /* 设置文本居中对齐 */
       }
       .responsive-img {
-        max-width: 100%;
-        height: auto;
+        max-width: 100%; /* 设置图片最大宽度为100% */
+        height: auto; /* 设置图片高度自动调整 */
       }
     </style>
   </head>
   <body>
     <h1>大标题</h1>
-    <!-- h1~h6 -->
+    <!-- h1~h6 表示不同级别的标题 -->
     <h2>二级标题</h2>
     <h3>三级标题</h3>
     <h4>四级标题</h4>
     <h5>五级标题</h5>
     <h6>六级标题</h6>
     <p>这是一个段落。</p>
+    <!-- 段落 -->
     <div>这是一个div。</div>
+    <!-- div容器 -->
     <span>这是一个span。</span>
+    <!-- span容器 -->
     <a href="#">这是一个链接</a>
+    <!-- 超链接 -->
     <img
       src="https://via.placeholder.com/150"
       alt="示例图片"
       class="responsive-img"
     />
+    <!-- 图片 -->
     <ul>
       <li>无序列表项1</li>
       <li>无序列表项2</li>
     </ul>
+    <!-- 无序列表 -->
     <ol>
       <li>有序列表项1</li>
       <li>有序列表项2</li>
     </ol>
+    <!-- 有序列表 -->
     <table>
       <tr>
         <th>表头1</th>
@@ -84,36 +95,49 @@
         <td>单元格2</td>
       </tr>
     </table>
+    <!-- 表格 -->
     <form>
       <label for="name">姓名:</label>
+      <!-- 表单标签 -->
       <input type="text" id="name" name="name" />
+      <!-- 文本输入框 -->
       <button type="submit">提交</button>
+      <!-- 提交按钮 -->
     </form>
+    <!-- 表单 -->
     <select>
       <option value="option1">选项1</option>
       <option value="option2">选项2</option>
     </select>
+    <!-- 下拉菜单 -->
     <textarea placeholder="请输入文本"></textarea>
+    <!-- 文本区域 -->
     <fieldset>
       <legend>字段集</legend>
+      <!-- 字段集 -->
       <label for="email">电子邮件:</label>
       <input type="email" id="email" name="email" />
+      <!-- 电子邮件输入框 -->
     </fieldset>
     <iframe src="https://www.example.com" width="300" height="200"></iframe>
+    <!-- 内嵌框架 -->!-- 内嵌框架 -->
     <audio controls>
       <source src="audio.mp3" type="audio/mpeg" />
       您的浏览器不支持音频元素。
     </audio>
+    <!-- 音频 -->
     <video controls width="300">
       <source src="video.mp4" type="video/mp4" />
       您的浏览器不支持视频元素。
     </video>
+    <!-- 视频 -->
     <canvas
       id="myCanvas"
       width="200"
       height="100"
       style="border: 1px solid #000000"
     ></canvas>
+    <!-- 画布 -->
     <svg width="100" height="100">
       <circle
         cx="50"
@@ -124,10 +148,14 @@
         fill="red"
       />
     </svg>
+    <!-- SVG图形 -->
     <embed src="example.pdf" width="300" height="200" />
+    <!-- 嵌入内容 -->
     <object data="example.pdf" type="application/pdf" width="300" height="200">
+      >
       <param name="name" value="value" />
     </object>
+    <!-- 对象元素 -->
     <map name="imagemap">
       <area
         shape="rect"
@@ -136,15 +164,25 @@
         href="computer.html"
       />
     </map>
+    <!-- 图像映射 -->
     <hr />
+    <!-- 水平线 -->
     <br />
+    <!-- 换行 -->
     <b>加粗文本</b>
+    <!-- 加粗文本 -->
     <strong>重要文本</strong>
+    <!-- 重要文本 -->
     <i>斜体文本</i>
+    <!-- 斜体文本 -->
     <em>强调文本</em>
+    <!-- 强调文本 -->
     <u>下划线文本</u>
+    <!-- 下划线文本 -->
     <s>删除线文本</s>
+    <!-- 删除线文本 -->
     <sub>下标文本</sub>
+    <!-- 下标文本 -->
     <div class="container">
       <div class="box">
         <h2>Box 1</h2>
@@ -155,22 +193,28 @@
         <p>This is another paragraph inside a flexbox container.</p>
       </div>
     </div>
+    <!-- Flexbox容器 -->
     <div class="grid-container">
       <div class="grid-item">Grid Item 1</div>
       <div class="grid-item">Grid Item 2</div>
       <div class="grid-item">Grid Item 3</div>
     </div>
+    <!-- Grid容器 -->
     <p class="highlight">This paragraph is highlighted.</p>
+    <!-- 高亮段落 -->
     <p class="center">This paragraph is centered.</p>
+    <!-- 居中段落 -->
     <button onclick="showAlert()">Click me</button>
+    <!-- 按钮 -->
     <script>
       function showAlert() {
-        alert("Button clicked!");
+        alert("Button clicked!"); /* 弹出提示 */
       }
       var canvas = document.getElementById("myCanvas");
       var ctx = canvas.getContext("2d");
       ctx.fillStyle = "#FF0000";
-      ctx.fillRect(0, 0, 150, 75);
+      ctx.fillRect(0, 0, 150, 75); /* 在画布上绘制矩形 */
     </script>
+    <!-- 脚本 -->
   </body>
 </html>
