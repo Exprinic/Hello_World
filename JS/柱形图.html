@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            background-color: rgb(rgb(195, 183, 183), green, blue);
+            justify-content: space-between;
+            width: 300px;
+            margin: 0 auto;
+            border-color: red;
+            border-style: dashed dotted solid double;
+        }
+        .box>div {
+            display: flex;
+            width: 50px;
+            background-color: #fff;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .box>div>span {
+            margin-top: -20px;
+        }
+        .box>div>h4 {
+            margin-left: -10px;
+            width: 70px;
+            margin-bottom: -35px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let arr = [];
+        for(let i = 0; i < 4; i++) {
+            console.log(i);
+            arr.push(prompt('please enter the numebr'));
+        }
+        console.log(arr);
+        //盒子开头
+        document.write(`<div class = ".box">`)
+        //盒子内容
+        for(let i = 0; i < arr.length; i++) {
+            document.write(`
+            <div style = "height :${arr[i]}px;">
+                <span>${arr[i]}</span>
+                <h4>第${i+1}季度</h4>
+            </div>
+            `)
+        }
+        // 盒子结尾
+        document.write(`</div>`)
+    </script>
+</body>
+</html>

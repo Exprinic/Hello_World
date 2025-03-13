@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyHtmlTestDocument</title>
+    <style>
+        .box {
+            background-color: rgb(163, 232, 59);
+            border-color: red;
+            border-style: dotted;
+            border-width: 10px;
+            width: 500px;
+            height: 300px;
+        }
+       .box.p {
+            height: 100px;
+            font-weight: 100;
+            font-size: 50px;
+            width: 100px;
+            /* 后代选择器 p中全部元素生效 */
+        }
+        /* .box > p { */
+            /* color: blue; */
+            /* font-size: 20px; */
+            子选择器 p中直接子元素生效
+        /* } */
+        #first {
+            color: red;
+            font-size: 20px;
+            /* id选择器 */
+        }
+        /* *{}全选选择器 */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>
+            Test
+            <span>Span选择器</span>
+        </p>
+        <p id="first">ID选择器
+            <span>Span选择器</span>
+        </p>
+    </div>
+</body>
+</html>

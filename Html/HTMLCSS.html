@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS样式应用演示</title>
+    <style>
+      /* 通用样式 */
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #f0f0f0;
+      }
+      section {
+        background: white;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* 块级元素演示 */
+      .block-demo {
+        width: 300px;
+        height: 100px;
+        background: #e3f2fd;
+        border: 2px solid #2196f3;
+        margin: 10px 0;
+        padding: 10px;
+      }
+
+      /* 行内元素演示 */
+      .inline-demo span {
+        color: #d32f2f;
+        background: #ffebee;
+        margin: 0 15px; /* 水平有效 */
+        padding: 0 10px;
+      }
+
+      /* 行内块元素演示 */
+      .inline-block-demo span {
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        background: #c8e6c9;
+        vertical-align: middle;
+        margin: 5px;
+      }
+
+      /* 替换元素演示 */
+      .replaced-demo img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border: 2px solid #4caf50;
+      }
+
+      /* 表格样式演示 */
+      .table-demo table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+      }
+      .table-demo td,
+      .table-demo th {
+        border: 1px solid #757575;
+        padding: 8px;
+        vertical-align: top;
+      }
+
+      /* 表单元素演示 */
+      .form-demo input[type="text"] {
+        border: 1px solid #9e9e9e;
+        border-radius: 4px;
+        padding: 8px;
+        margin: 5px 0;
+        width: 200px;
+      }
+      .form-demo input:focus {
+        outline: none;
+        border-color: #2196f3;
+      }
+      .form-demo button {
+        background: #2196f3;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .form-demo button:hover {
+        background: #1976d2;
+      }
+
+      /* 伪类/元素演示 */
+      .pseudo-demo p::before {
+        content: "▶ ";
+        color: #4caf50;
+      }
+      .pseudo-demo li:nth-child(odd) {
+        background: #fff3e0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 块级元素 -->
+    <section>
+      <h2>块级元素 (div/p)</h2>
+      <div class="block-demo">块级容器 div</div>
+      <p class="block-demo">段落标签 p</p>
+    </section>
+
+    <!-- 行内元素 -->
+    <section class="inline-demo">
+      <h2>行内元素 (span/a)</h2>
+      <span>行内元素 span1</span>
+      <span>行内元素 span2</span>
+      <a href="#">链接示例</a>
+    </section>
+
+    <!-- 行内块元素 -->
+    <section class="inline-block-demo">
+      <h2>行内块元素</h2>
+      <span>Item 1</span>
+      <span>Item 2</span>
+      <span>Item 3</span>
+    </section>
+
+    <!-- 替换元素 -->
+    <section class="replaced-demo">
+      <h2>替换元素 (img/input)</h2>
+      <img src="https://picsum.photos/300/200" alt="随机图片" />
+      <input type="text" placeholder="输入框示例" />
+    </section>
+
+    <!-- 表格元素 -->
+    <section class="table-demo">
+      <h2>表格元素</h2>
+      <table>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Empty Cell</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- 表单元素 -->
+    <section class="form-demo">
+      <h2>表单元素</h2>
+      <input type="text" placeholder="请输入文本" />
+      <button type="button">提交按钮</button>
+    </section>
+
+    <!-- 伪类/元素 -->
+    <section class="pseudo-demo">
+      <h2>伪类/元素</h2>
+      <p>带前置图标的段落</p>
+      <ul>
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+      </ul>
+    </section>
+  </body>
+</html>
