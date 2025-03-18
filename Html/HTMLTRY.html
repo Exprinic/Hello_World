@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,35 +14,78 @@
             width: 500px;
             height: 300px;
         }
-       .box.p {
+
+        .box.p {
+            color: blue;
             height: 100px;
             font-weight: 100;
             font-size: 50px;
             width: 100px;
             /* 后代选择器 p中全部元素生效 */
         }
+
         /* .box > p { */
-            /* color: blue; */
-            /* font-size: 20px; */
-            子选择器 p中直接子元素生效
+        /* color: blue; */
+        /* font-size: 20px; */
+        /* 子选择器 只对子元素p标签生效 */
         /* } */
+
         #first {
             color: red;
             font-size: 20px;
             /* id选择器 */
         }
-        /* *{}全选选择器 */
     </style>
 </head>
+
 <body>
     <div class="box">
         <p>
             Test
+            <br>
             <span>Span选择器</span>
         </p>
         <p id="first">ID选择器
             <span>Span选择器</span>
         </p>
     </div>
+
+    <!-- 文本格式优化 -->
+    <div>
+        <b>加粗文本</b>
+        <br>
+        <i>斜体文本</i>
+        <br>
+        <small>小号文本</small>
+        <br>
+        <u>下划线文本</u>
+        <br>
+        <strong>重要文本</strong>
+        <br>
+        <code>电脑自动输出</code>
+        <br>
+        <em>强调文本</em>
+        <br>
+        <mark>标记文本</mark>
+        <br>
+        <del>删除文本</del>
+        <br>
+        <ins>插入文本</ins>
+        <br>
+        <kbd>键盘输入</kbd>
+        <br>
+        <pre>预格式化文本</pre>
+        <br>
+        <samp>计算机代码</samp>
+        <br>
+        <var>变量</var>
+        <br>
+        <abbr title="Hypertext Markup Language">HTML</abbr>
+        <br>
+        <cite>引用</cite>
+        这是<sub>下标</sub>和<sup>上标</sup>
+        <br>
+    </div>
 </body>
+
 </html>
