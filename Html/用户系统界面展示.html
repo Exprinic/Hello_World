@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户系统界面</title>
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* 主容器 */
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            width: 100%;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        /* 导航选项卡 */
+        .nav-tabs {
+            display: flex;
+            background: #e7e8ea;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            background: #fff;
+            color: #6c5ce7;
+            font-weight: 600;
+        }
+
+        /* 内容区域 */
+        .content-section {
+            padding: 30px;
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* 表单样式 */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #495057;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #6c5ce7;
+            outline: none;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .btn-primary {
+            background: #6c5ce7;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #adb5bd;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* 内容展示区 */
+        .content-list {
+            list-style: none;
+        }
+
+        .content-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .content-item:hover {
+            transform: translateX(10px);
+        }
+
+        .item-icon {
+            width: 40px;
+            height: 40px;
+            background: #6c5ce7;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 导航选项卡 -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="switchTab('login')">登录</button>
+            <button class="tab-btn" onclick="switchTab('register')">注册</button>
+            <button class="tab-btn" onclick="switchTab('content')">内容查看</button>
+        </div>
+
+        <!-- 登录界面 -->
+        <div id="login" class="content-section active">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #343a40;">用户登录</h2>
+            <form>
+                <div class="form-group">
+                    <label>用户名</label>
+                    <input type="text" class="form-control" placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <label>密码</label>
+                    <input type="password" class="form-control" placeholder="请输入密码">
+                </div>
+                <button type="submit" class="btn btn-primary">立即登录</button>
+                <button type="button" class="btn btn-secondary" onclick="switchTab('register')">没有账号？立即注册</button>
+            </form>
+        </div>
+
+        <!-- 注册界面 -->
+        <div id="register" class="content-section">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #343a40;">新用户注册</h2>
+            <form>
+                <div class="form-group">
+                    <label>用户名</label>
+                    <input type="text" class="form-control" placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <label>邮箱地址</label>
+                    <input type="email" class="form-control" placeholder="请输入邮箱">
+                </div>
+                <div class="form-group">
+                    <label>设置密码</label>
+                    <input type="password" class="form-control" placeholder="至少6位字符">
+                </div>
+                <button type="submit" class="btn btn-primary">立即注册</button>
+                <button type="button" class="btn btn-secondary" onclick="switchTab('login')">已有账号？立即登录</button>
+            </form>
+        </div>
+
+        <!-- 内容查看界面 -->
+        <div id="content" class="content-section">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #343a40;">最新内容</h2>
+            <ul class="content-list">
+                <li class="content-item">
+                    <div class="item-icon"></div>
+                    <div>
+                        <h3>前端开发指南</h3>
+                        <p>最新技术趋势与最佳实践</p>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <div class="item-icon"></div>
+                    <div>
+                        <h3>设计系统规范</h3>
+                        <p>构建统一的设计语言</p>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <div class="item-icon"></div>
+                    <div>
+                        <h3>性能优化方案</h3>
+                        <p>提升网站加载速度技巧</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 简单的选项卡切换功能
+        function switchTab(tabName) {
+            // 隐藏所有内容区
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // 显示目标内容区
+            document.getElementById(tabName).classList.add('active');
+            
+            // 更新选项卡按钮状态
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
